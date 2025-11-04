@@ -1,5 +1,7 @@
 #Navigator: Endu
 #Driver: Marvellous
 
-def add():
-    toAdd = input("New task description: ")
+def add(userInput, tasks):
+        item = userInput[4:].strip()
+        if item:
+            tasks.append(item)

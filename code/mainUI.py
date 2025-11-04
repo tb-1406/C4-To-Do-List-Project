@@ -25,9 +25,7 @@ while True:
 
     try:   
         if cmdInput.lower().startswith("add "):
-            item = cmdInput[4:].strip()
-            if item:
-                tasks.append(item)
+            add(cmdInput, tasks)
     except:
         print("Error: Invalid input")
     
