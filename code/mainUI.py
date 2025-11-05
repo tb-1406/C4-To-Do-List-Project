@@ -8,24 +8,30 @@ tasks = []
 while True:
     os.system('cls')
 
-    print("-----------------------------------------------------------------------------")
+    print("------------------------------------------------------------------------------------------------------------------------")
     print("")
     if len(tasks) == 0:
-        print("No tasks currently. To add tasks, type 'add [task name]'")
+        print("add [task name]: Add tasks to to-do list\ndelete [task no.]: Delete task item\ndone [task no.]: Mark task as complete\nclear: Remove all tasks\nmod [task no.]: Modify task\nexp [task no.]: Export task\nimp: Import tasks\n\n------------------------------------------------------------------------------------------------------------------------\n\nNo tasks currently.")
     else:
-        print("To add tasks, type 'add [task name]'")
+        print("add [task name]: Add tasks to to-do list\ndelete [task no.]: Delete task item\ncomplete [task no.]: Mark task as complete\nclear: Remove all tasks\nmod [task no.]: Modify task\nexp [task no.]: Export task\nimp: Import tasks\n\n------------------------------------------------------------------------------------------------------------------------\n")
         for i, task in enumerate(tasks):
             print(f"[{i + 1}]", task)
 
     print("")
-    print("-----------------------------------------------------------------------------")
+    print("------------------------------------------------------------------------------------------------------------------------")
     print("")
 
     cmdInput = input("->  ")
+    cmdInput = cmdInput.lower()
 
     try:   
-        if cmdInput.lower().startswith("add "):
+        if cmdInput.startswith("add "):
             add(cmdInput, tasks)
+        elif cmdInput == "clear":
+            tasks.clear()
+        elif cmdInput.startwith == "done":
+            complete(cmdInput, tasks)
+            
     except:
         print("Error: Invalid input")
     
