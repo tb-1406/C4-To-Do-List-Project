@@ -33,6 +33,8 @@ while True:
             tasks.clear()
         elif cmdInput.startwith == "done":
             complete(cmdInput, tasks)
+        elif cmdInput.startwith == "modify":
+            modify(cmdInput, tasks)
             
     except:
         print("Error: Invalid input")
