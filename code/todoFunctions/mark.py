@@ -2,8 +2,8 @@
 #Driver: Marvellous
 
 def complete(userInput, tasks):
-    item = userInput[5:].strip()
-    tostrike = tasks[item]
+    index = int(userInput[5:].strip()) - 1
+    tostrike = str(tasks[index])
     strikeCode = str("&#822;")
     newStr = ""
 
@@ -11,5 +11,5 @@ def complete(userInput, tasks):
         newStr += strikeCode + i
 
     newStr += strikeCode
-    tasks[item] = newStr
+    tasks[index] = newStr
     
