@@ -3,12 +3,12 @@
 
 
 def read(task = [], *args ):
-    with open("inst","w") as f:
+    with open("inst.txt","w") as f:
         for item in task:
             f.write(str(item) + "\n")
     
 
-    with open("inst", "r") as f:
+    with open("inst.txt", "r") as f:
             print(f.read())
 
 
