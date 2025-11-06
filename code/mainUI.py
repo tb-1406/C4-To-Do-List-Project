@@ -11,11 +11,11 @@ while True:
     print("------------------------------------------------------------------------------------------------------------------------")
     print("")
     if len(tasks) == 0:
-        print("add [task name]: Add tasks to to-do list\ndelete [task no.]: Delete task item\ndone [task no.]: Mark task as complete\nclear: Remove all tasks\nmod [task no.]: Modify task\nexp [task no.]: Export task\nimp: Import tasks\n\n------------------------------------------------------------------------------------------------------------------------\n\nNo tasks currently.")
+        print("\033[33madd [task name]: Add tasks to to-do list\ndelete [task no.]: Delete task item\ndone [task no.]: Mark task as complete\nclear: Remove all tasks\nmod [task no.]: Modify task\nexp [task no.]: Export task\nimp: Import tasks\033[0m\n\n------------------------------------------------------------------------------------------------------------------------\n\n\033[41mNo tasks currently.\033[0m")
     else:
-        print("add [task name]: Add tasks to to-do list\ndelete [task no.]: Delete task item\ncomplete [task no.]: Mark task as complete\nclear: Remove all tasks\nmod [task no.]: Modify task\nexp [task no.]: Export task\nimp: Import tasks\n\n------------------------------------------------------------------------------------------------------------------------\n")
+        print("\033[33madd [task name]: Add tasks to to-do list\ndelete [task no.]: Delete task item\ndone [task no.]: Mark task as complete\nclear: Remove all tasks\nmod [task no.]: Modify task\nexp [task no.]: Export task\nimp: Import tasks\033[0m\n\n------------------------------------------------------------------------------------------------------------------------\n")
         for i, task in enumerate(tasks):
-            print(f"[{i + 1}]", task)
+            print(f"\033[42m[{i + 1}]\033[0m", task)
 
     print("")
     print("------------------------------------------------------------------------------------------------------------------------")
