@@ -32,7 +32,7 @@ while True:
         elif cmdInput.startwith == "done":
             complete(cmdInput, tasks)
         elif cmdInput.startwith == "modify":
-            modify()
+            modify(cmdInput, tasks)
             
     except:
         print("Error: Invalid input")
