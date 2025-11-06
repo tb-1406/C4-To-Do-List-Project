@@ -29,9 +29,12 @@ while True:
             add(cmdInput, tasks)
         elif cmdInput == "clear":
             tasks.clear()
-        elif cmdInput.startwith == "done":
+        elif cmdInput.startswith == "done":
             complete(cmdInput, tasks)
-            
+        elif cmdInput.startswith == "delete":
+            print("test line")
+            print(cmdInput)
+            delete(cmdInput, tasks)
     except:
         print("Error: Invalid input")
     
